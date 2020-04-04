@@ -15,13 +15,23 @@ class BookingsController < ApplicationController
 
   # POST /bookings
   def create
-    if params[:function_id]
-      @function = Function.find(params[:function_id])
-      if @function.bookings.count == 2
+    if booking_params[:function_id]
+      @function = Function.find(booking_params[:function_id])
+      if @function.bookings.count == 10
         render json: {mssg: "Full function"}
         return
       else
-        @booking = Booking.new(booking_params)
+        if @user = User.find_by(identification: booking_params[:identification])
+          binding.pry
+          booking_params_hash = booking_params.merge({user_id: @user.id})
+          @booking = Booking.new(booking_params_hash.except(:identification, :name, :email) )
+        else
+          binding.pry
+          @user = User.new(booking_params.slice(:identification, :name, :email))
+          @user.save
+          booking_params_hash = booking_params.merge({user_id: @user.id})
+          @booking = Booking.new(booking_params_hash.except(:identification, :name, :email))
+        end
       end
     end
     
@@ -55,6 +65,10 @@ class BookingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.require(:booking).permit(:day, :user_id, :function_id)
+      params.require(:booking).permit(:day, :function_id, :identification, :name, :email)
+    end
+
+    def user_params
+      params.permit(:identification, :name, :email)
     end
 end
