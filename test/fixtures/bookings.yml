@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2020-04-04 00:55:17
+  user: one
+  function: one
+
+two:
+  day: 2020-04-04 00:55:17
+  user: two
+  function: two
