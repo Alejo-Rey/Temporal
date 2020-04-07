@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: redirect('public/index.html')
+
   resources :bookings
   resources :users
   resources :functions
