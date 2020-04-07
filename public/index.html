@@ -18,19 +18,55 @@
     
 
     <div id="movies" class="tabcontent">
-        <div class="container">
-            <div class="col-sm-4">
-                <h3>Películas</h3>
-                <p>Selecionar fecha</p>
-                <button>Crear Nueva Película</button>
-            </div>
+        <div>
+            <h3>Películas</h3>
         </div>
         <div class="container">
-        <div class="col-sm-8 post">
-                <div>
-                    <div>
-                        <p>image 1</p>
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>Selecionar fecha</p>
+                </div>
+                <div class="col-sm-6">
+                    <select id="date">
+                        <option>Seleccionar ...</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <div class="container">
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Crear Nueva Película</button>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                              
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h1 class="modal-title">Modal Heading</h1>
+                                  <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <h3>Some text to enable scrolling..</h3>
+                        
+                                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button id="create" type="button" class="btn btn-primary" data-dismiss="modal">Crear Nueva Película</button>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div id="grid">
                 </div>
             </div>
         </div>
@@ -40,7 +76,8 @@
         <h3>Reservas Realizadas</h3>
         <p>Seleccionar fecha</p>
     </div>
-    <script src="./scripts/home.js"></script> 
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/ajax.js"></script> 
 </body>
 
 </html>
