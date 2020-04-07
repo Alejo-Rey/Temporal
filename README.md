@@ -27,7 +27,8 @@ users | GET, POST, PUT, DELETE |
  Go to your Browser and enter the URL\
  `http://localhost:3000/`\
  You can list filter and create in this view
-
+ 
+![Example](https://github.com/Alejo-Rey/movies_booking/blob/master/public/images/movies_booking.png)
 
 ## Endpoints
 
