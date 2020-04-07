@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: redirect('public/index.html')
 
-  resources :bookings
+  resources :bookings do 
+    get 'resume', on: :collection
+  end
   resources :users
   resources :functions
   resources :movies

@@ -21,43 +21,62 @@
         <div>
             <h3>Películas</h3>
         </div>
+        <br>
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
                     <p>Selecionar fecha</p>
                 </div>
                 <div class="col-sm-6">
-                    <select id="date">
-                        <option>Seleccionar ...</option>
+                    <select class="form-control" id="date">
+                        <option value="NULL">Seleccionar ...</option>
                     </select>
                 </div>
                 <div class="col-sm-4">
                     <div class="container">
                         <!-- Button to Open the Modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Crear Nueva Película</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Crear Nueva Película</button>
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                              
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                  <h1 class="modal-title">Modal Heading</h1>
-                                  <button type="button" class="close" data-dismiss="modal">×</button>
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">Crear Película</h2>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                        <div class="modal-body">
+                                            
+                                            <div class="fa fa-columns">
+                                                <p>Titulo</p>
+                                                <input class="form-control" id="name">
+                                            </div>
+                                            <div class="fa fa-columns">
+                                                <p>Sinopsis</p>
+                                                <input class="form-control" id="description">
+                                            </div>
+                                            <div class="fa fa-columns">
+                                                <p>Poster url</p>
+                                                <input class="form-control" id="url_img">
+                                            </div>
+                                            <div class="fa fa-columns">
+                                                <p>Fecha</p>
+                                                <input class="form-control" id="day">
+                                            </div>
+                                            
+                                        </div>
+                                
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button id="create" type="button" class="btn btn-primary">Crear Nueva
+                                                Película</button>
+                                        </div>
                                 </div>
-                                
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                  <h3>Some text to enable scrolling..</h3>
-                        
-                                
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
-                                  <button id="create" type="button" class="btn btn-primary" data-dismiss="modal">Crear Nueva Película</button>
-                                </div>
-                                
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,12 +91,50 @@
         </div>
     </div>
 
-    <div id="bookings" class="tabcontent">
-        <h3>Reservas Realizadas</h3>
-        <p>Seleccionar fecha</p>
+    <div id="bookings" class="tabcontent">        
+        <div class="container">
+            <div>
+                <h3>Reservas Realizadas</h3>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>Selecionar fecha</p>
+                </div>
+                <div class="col-sm-6">
+                    <select class="form-control" id="dateBooking">
+                        <option value="NULL">Seleccionar ...</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Película</th>
+                        <th>Nombre Reservante</th>
+                        <th>Correo electrónico</th>
+                        <th>Cédula</th>
+                        <th>Celular</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="./scripts/home.js"></script>
-    <script src="./scripts/ajax.js"></script> 
+    <script src="./scripts/ajax.js"></script>
+    <script src="./scripts/post.js"></script>
+    <script src="./scripts/bookings.js"></script>
 </body>
 
 </html>

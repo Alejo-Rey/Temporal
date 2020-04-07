@@ -13,6 +13,12 @@ class BookingsController < ApplicationController
     render json: @booking
   end
 
+  # GET /bookings/resume
+  def resume
+    @bookings = Booking.bookings_resume(params[:day])
+    render json: @bookings
+  end
+
   # POST /bookings
   def create
     if booking_params[:function_id]

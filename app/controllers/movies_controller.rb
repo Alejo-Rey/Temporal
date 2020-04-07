@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   # GET /movies
   def index
-    if params[:day]
+    if params[:day] != "" && params[:day] != nil
       @movies = Movie.query_by_day(params[:day])
     else
       @movies = Movie.all
