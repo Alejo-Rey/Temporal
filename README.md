@@ -23,6 +23,10 @@ users | GET, POST, PUT, DELETE |
 `./create.sh`
 
  `rails server --binding 0.0.0.0 --port 3000`
+ 
+ Go to your Browser and enter the URL\
+ `http://localhost:3000/`\
+ You can list filter and create in this view
 
 
 ## Endpoints
