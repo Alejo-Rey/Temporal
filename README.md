@@ -35,7 +35,7 @@ To show all the movies
 `curl -X GET 'http://localhost:3000/movies' -d '{"day": "2020-02-20T02:50:00.000Z"}'`\
 To show an especific movie filter by a date
 
-`curl -X POST 'http://localhost:3000/movies' -d '{"name": "movie 3","description": "descriotion movie 2","url_img": "image movie 2", "day_function": "2020-02-20T02:50:00.000Z"}'`\
+`curl -X POST 'http://localhost:3000/movies' -d '{"name":"movie 5","description":"descriotion movie 5","url_img":"url image 5","day_function":"2020-02-20T02:50:00.000Z"}'`\
 To create a movie
 
 ### /functions
