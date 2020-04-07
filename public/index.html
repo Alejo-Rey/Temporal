@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="LateralMenu(event, 'movies')" id="defaultOpen">Películas</button>
+        <button class="tablinks" onclick="LateralMenu(event, 'bookings')">Reservas</button>
+    </div>
+    
+
+    <div id="movies" class="tabcontent">
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Películas</h3>
+                <p>Selecionar fecha</p>
+                <button>Crear Nueva Película</button>
+            </div>
+        </div>
+        <div class="container">
+        <div class="col-sm-8 post">
+                <div>
+                    <div>
+                        <p>image 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookings" class="tabcontent">
+        <h3>Reservas Realizadas</h3>
+        <p>Seleccionar fecha</p>
+    </div>
+    <script src="./scripts/home.js"></script> 
+</body>
+
+</html>
