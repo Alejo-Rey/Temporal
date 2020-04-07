@@ -1,3 +1,4 @@
+
 function LateralMenu(evt, menu) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -13,4 +14,4 @@ function LateralMenu(evt, menu) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click(); 
